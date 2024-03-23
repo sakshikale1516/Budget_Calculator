@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  background-image: url("bg.jpg");
+  opacity: 0.9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(185, 185, 228, 0.5);
+}
+
+.wrapper {
+  width: 90%;
+  font-size: 18px;
+  max-width: 43.75em;
+  margin: 1em auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.sub-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper h3 {
+  color: #6499e9;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+.wrapper :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px rgba(0, 0, 0, 0.3);
+}
+
+.container input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #6499e9;
+  border-radius: 0.3em;
+  color: #6499e9;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+
+.container input:focus {
+  border-color: #70a4d2;
+}
+.container :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px blue;
+}
+
+.total-amount-container,
+.user-amount-container {
+  background-color: #ffffff;
+  padding: 1.25em 0.9em;
+  border-radius: 0.3em;
+  box-shadow: 0 4px 12px -2px blue;
+  border-radius: 10px;
+}
+
+.total-amount-container :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px blue;
+}
+.user-amount-container :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px blue;
+}
+
+.output-container {
+  background-color: #6499e9;
+  color: #ffffff;
+  border-radius: 0.3em;
+  margin: 2em 0;
+  padding: 1.2em;
+  box-shadow: 0 4px 12px -2px blue;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.output-container :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px blue;
+}
+
+.output-container p {
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+
+.output-container span {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #e5e5e5;
+}
+
+.submit {
+  font-size: 1em;
+  margin-top: 0.8em;
+  background-color: #6499e9;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.list {
+  background-color: #ffffff;
+  padding: 1.8em 1.2em;
+  box-shadow: 0 0.6em 1.2em blue;
+  border-radius: 0.6em;
+  box-shadow: 0 4px 12px -2px blue;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.list :hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 18px -10px blue;
+}
+
+.sublist-content {
+  width: 100%;
+  border-left: 0.3em solid #6499e9;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+
+.product {
+  font-weight: 500;
+  color: #363d55;
+}
+
+.amount {
+  color: #414a67;
+  margin-left: 20%;
+}
+
+.icons-container {
+  width: 5em;
+  margin: 1.2em;
+  align-items: center;
+}
+
+.product-title {
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  color: #ff465a;
+}
+
+.edit {
+  margin-left: auto;
+}
+
+.edit,
+.delete {
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1.5em;
+  border: none;
+  color: #31708f;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 14px;
+  }
+  .sub-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+
+.chart-heading {
+  color: #31708f;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+
+.donut {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px, 24px;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: #31708f;
+  width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
